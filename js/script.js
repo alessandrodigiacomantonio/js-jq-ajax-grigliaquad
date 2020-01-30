@@ -6,7 +6,7 @@ $(document).ready(function() {
   var  genColumn = Handlebars.compile(column);
 
   for (var i = 0; i < 6; i++) {
-    var rowNumber = { row_number: i+1,};
+    var rowNumber = { row_number: (i+1),};
     var newRow = genRow(rowNumber);
     $('#main').append(newRow);
   }
@@ -36,9 +36,8 @@ $(document).ready(function() {
           }
         },
         error: function (){}
-      }
+      },
     );
-
   });
 
 });
