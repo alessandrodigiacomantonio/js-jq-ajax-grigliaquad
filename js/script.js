@@ -18,19 +18,21 @@ $(document).ready(function() {
 
   $('.column').on('click',
   function() {
+    var thisColumn = this;
     $.ajax(
       {
-       url: "http://www.boolean.careers/api/random/boolean",
-       method: "GET",
-       success: function (data, stato) {
-
-         $(this).html(data);
-         if (data<=5) $(this).addClass('yellow');
-         else $(this).addClass('green');
+        url: "https://flynn.boolean.careers/exercises/api/random/int",
+        method: "GET",
+        success: function (data) {
+          $(thisColumn).html(data.response);
+          if(data.response <= 5) {
+            $(thisColumn).addClass('yellow');
+          }
+          else {
+            $(thisColumn).addClass('green');
+          }
         },
-       error: function (richiesta, stato, errore) {
-         alert("E' avvenuto un errore. " + errore);
-        }
+        error: function (){}
       }
     );
 
