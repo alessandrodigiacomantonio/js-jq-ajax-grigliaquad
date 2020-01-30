@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Zhi Mang Xing', cursive;
 }
 .row {
   display:flex;
