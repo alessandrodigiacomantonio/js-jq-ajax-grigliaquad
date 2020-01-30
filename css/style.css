@@ -25,10 +25,11 @@
   width: 100px;
   height: 100px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.15s;
+  background-color: tan;
 }
 .column:hover {
-  background-color: rgba(0,0,0,0.05);
+  filter: brightness(0.9);
 }
 .yellow {
   background-color: goldenrod;
