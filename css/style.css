@@ -13,6 +13,15 @@
   justify-content: center;
   align-items: center;
   font-family: 'Zhi Mang Xing', cursive;
+  background-image: url('https://d7hftxdivxxvm.cloudfront.net/?resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F2RNK1P0BYVrSCZEy_Sd1Ew%252F3417757448_4a6bdf36ce_o.jpg&width=1200&quality=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#main h1 {
+  font-family: 'Sigmar One', cursive;
+  margin-bottom: 50px;
+  color: darkkhaki;
 }
 .row {
   display:flex;
