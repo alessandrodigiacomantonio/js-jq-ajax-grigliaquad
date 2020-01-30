@@ -5,15 +5,18 @@ $(document).ready(function() {
   var column = document.getElementById("column").innerHTML;
   var  genColumn = Handlebars.compile(column);
 
-  for (var i = 0; i < 6; i++) {
-    var rowNumber = { row_number: (i+1),};
+  for (var i = 1; i <= 6; i++) {
+    var rowNumber = { row_number: i };
     var newRow = genRow(rowNumber);
     $('#main').append(newRow);
+
   }
-  for (var j = 0; j < 6; j++) {
-    var columnNumber = { column_number: (j+1),};
-    var newColumn = genColumn(columnNumber);
-    $('.row').attr('data-row', j+1 ).append(newColumn);
+  for (var i = 1; i <= 6; i++) {
+    for (var j = 1; j <= 6; j++) {
+      var columnNumber = { column_number: j };
+      var newColumn = genColumn(columnNumber);
+      $('.row').eq( i ).append(newColumn);
+    }
   }
 
   $('.column').on('click',
