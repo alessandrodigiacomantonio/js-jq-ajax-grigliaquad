@@ -9,19 +9,22 @@
   width: 100%;
   height: 100vh;
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#row {
+.row {
   display:flex;
 }
-#column {
+.column {
   display:flex;
   justify-content:center;
   align-items:center;
   border: 1px solid slategray;
-  width: calc(90% / 6);
-  height: calc(80% / 6);
+  /* width: calc(90% / 6);
+  height: calc(80% / 6); */
+  width: 10px;
+  height:10px;
 }
 .yellow {
   background-color: goldenrod;

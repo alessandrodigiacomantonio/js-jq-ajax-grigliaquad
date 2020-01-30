@@ -19,12 +19,12 @@
   </main>
 
   <script id="row" type="text/x-handlebars-template">
-    <div class="row {{row-number}}">
+    <div class="row" data-row="{{row_number}}">
     </div>
   </script>
 
   <script id="column" type="text/x-handlebars-template">
-    <div class="column {{column-number}} {{bgc}}">
+    <div class="column {{bgc}}" data-column="{{column_number}} ">
       <span>{{randomNumber}}</span>
     </div>
   </script>
