@@ -16,4 +16,24 @@ $(document).ready(function() {
     $('.row').attr('data-row', i+1 ).append(newColumn);
   }
 
+  $('.column').on('click',
+  function() {
+    $.ajax(
+      {
+       url: "http://www.boolean.careers/api/random/boolean",
+       method: "GET",
+       success: function (data, stato) {
+
+         $(this).html(data);
+         if (data<=5) $(this).addClass('yellow');
+         else $(this).addClass('green');
+        },
+       error: function (richiesta, stato, errore) {
+         alert("E' avvenuto un errore. " + errore);
+        }
+      }
+    );
+
+  });
+
 });
