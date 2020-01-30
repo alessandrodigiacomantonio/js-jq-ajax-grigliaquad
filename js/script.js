@@ -24,12 +24,15 @@ $(document).ready(function() {
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
         success: function (data) {
-          $(thisColumn).html(data.response);
-          if(data.response <= 5) {
-            $(thisColumn).addClass('yellow');
-          }
-          else {
-            $(thisColumn).addClass('green');
+          console.log($(thisColumn).find('span').html());
+          if ($(thisColumn).find('span').html().length == 0) {
+            $(thisColumn).html(data.response);
+            if(data.response <= 5) {
+              $(thisColumn).addClass('yellow');
+            }
+            else {
+              $(thisColumn).addClass('green');
+            }
           }
         },
         error: function (){}
