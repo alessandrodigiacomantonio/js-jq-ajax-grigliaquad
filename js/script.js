@@ -9,9 +9,9 @@ $(document).ready(function() {
     var rowNumber = { row_number: i };
     var newRow = genRow(rowNumber);
     $('#main').append(newRow);
-
   }
-  for (var i = 1; i <= 6; i++) {
+
+  for (var i = 0; i < 6; i++) {
     for (var j = 1; j <= 6; j++) {
       var columnNumber = { column_number: j };
       var newColumn = genColumn(columnNumber);
